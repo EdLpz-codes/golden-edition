@@ -1,0 +1,361 @@
+
+<!-- This is book list, html / i will add books and audio books -->
+ 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <main>
+         <!-- =====================================================
+                Magazines Grid (20 products, 4 per category)
+                all cards have the same structure:
+                 article.product-card (data-category + data-price)
+                 └ div.card-img      (picture + category badge on top)
+                 └ div.card-content  (title, location, time, price, button)
+                 data-price is only number(not commas, no €) it makes javascript compare it with the slider.
+             ===================================================== -->
+
+    <section class="products-grid-section">
+            <div class="container">
+                <div class="product-grid" id="productGrid">
+
+                    <!-- ================= Cooking ================= -->
+
+                    <!-- [Cookig magazine 1] -->
+                    <article class="product-card" data-category="cooking" data-price="8">
+                        <div class="card-img">
+                            <img src="images(magazine)/cooking/food_magazine1.png" alt="Food magazine">
+                            <span class="badge cooking">Cooking</span>
+                        </div>
+                        <div class="card-content">
+                            <h3>Food Magazine</h3>
+                            <p class="meta">by Food magazine | issued 6 December 2026</p>
+                            <p class="price"><strong>€8</strong></p>
+                            <p class="meta">Free delivery</p>
+                            <p class="meta">6 Dec on your first eligible order</p>
+                            <a href="shoppinglist.html" class="detail-btn">Add to list</a>
+                        </div>
+                    </article>
+
+                    <!-- [Cookig magazine 2] -->
+                    <article class="product-card" data-category="cooking" data-price="5.5">
+                        <div class="card-img">
+                            <img src="images(magazine)/cooking/food_magazine2.png" alt="Baker">
+                            <span class="badge cooking">Cooking</span>
+                        </div>
+                        <div class="card-content">
+                            <h3>Baker</h3>
+                            <p class="meta">by Sweet.Co | issued 1 December 2026</p>
+                            <p class="price"><strong>€5.5</strong></p>
+                            <p class="meta">Free delivery</p>
+                            <p class="meta">1 Dec on your first eligible order</p>
+                            <a href="shoppinglist.html" class="detail-btn">Add to list</a>
+                        </div>
+                    </article>
+
+                    <!-- [Cookig magazine 3] -->
+                    <article class="product-card" data-category="cooking" data-price="5">
+                        <div class="card-img">
+                            <img src="images(magazine)/cooking/food_magazine3.png" alt="Foodies">
+                            <span class="badge cooking">Cooking</span>
+                        </div>
+                        <div class="card-content">
+                            <h3>Foodies</h3>
+                            <p class="meta">by foodies.Co | issued 5 Nov 2026</p>
+                            <p class="price"><strong>€5</strong></p>
+                            <p class="meta">Free delivery</p>
+                            <p class="meta">Special Edition</p>
+                            <p class="meta">Order available now</p>
+                            <a href="shoppinglist.html" class="detail-btn">Add to list</a>
+                        </div>
+                    </article>
+
+                    <!-- [Cookig magazine 4] -->
+                    <article class="product-card" data-category="cooking" data-price="7">
+                        <div class="card-img">
+                            <img src="images(magazine)/cooking/food_magazine4.png" alt="">
+                            <span class="badge cooking">Cooking</span>
+                        </div>
+                        <div class="card-content">
+                            <h3>Vintage & Volume</h3>
+                            <p class="meta">by reallygretsite | issued 1 Nov 2026</p>
+                            <p class="price"><strong>€7</strong></p>
+                            <p class="meta">Free delivery</p>
+                            <p class="meta">Order available now</p>
+                            <a href="shoppinglist.html" class="detail-btn">Add to list</a>
+                        </div>
+                    </article>
+
+                    <!-- [Cookig magazine 5] -->
+                    <article class="product-card" data-category="cooking" data-price="7">
+                        <div class="card-img">
+                            <img src="images(magazine)/cooking/food_magazine5.png" alt="Healthy Food">
+                            <span class="badge cooking">Cooking</span>
+                        </div>
+                        <div class="card-content">
+                            <h3>Healthy Food</h3>
+                            <p class="meta">by Health hunter.INC | issued 1 Dec 2026</p>
+                            <p class="price"><strong>€7</strong></p>
+                            <p class="meta">Free delivery</p>
+                            <p class="meta">1 Dec on your first eligible order</p>
+                            <a href="shoppinglist.html" class="detail-btn">Add to list</a>
+                        </div>
+                    </article>
+
+                    <!-- ================= Economy ================= -->
+
+                    <!-- [Economy magazine 1] -->
+                     <article class="product-card" data-category="economy" data-price="11">
+                        <div class="card-img">
+                            <img src="images(magazine)/economy/economy_magazine1.png" alt="career">
+                            <span class="badge economy">Economy</span>
+                        </div>
+                        <div class="card-content">
+                            <h3>career</h3>
+                            <p class="meta">by recuriter.Co | issued 6 Dec 2026</p>
+                            <p class="price"><strong>€11</strong></p>
+                            <p class="meta">Free delivery</p>
+                            <p class="meta">6 Dec on your first eligible order</p>
+                            <a href="shoppinglist.html" class="detail-btn">Add to list</a>
+                        </div>
+                    </article>
+
+                    <!-- [Economy magazine 2] -->
+                     <article class="product-card" data-category="economy" data-price="7">
+                        <div class="card-img">
+                            <img src="images(magazine)/economy/economy_magazine2.png" alt="Warner Magazine">
+                            <span class="badge economy">Economy</span>
+                        </div>
+                        <div class="card-content">
+                            <h3>Warner Magazine</h3>
+                            <p class="meta">by daily investment insights | issued 1 Dec 2026</p>
+                            <p class="price"><strong>€7</strong></p>
+                            <p class="meta">Free delivery</p>
+                            <p class="meta">1 Dec on your first eligible order</p>
+                            <a href="shoppinglist.html" class="detail-btn">Add to list</a>
+                        </div>
+                    </article>
+
+                    <!-- [Economy magazine 3] -->
+                     <article class="product-card" data-category="economy" data-price="5.60">
+                        <div class="card-img">
+                            <img src="images(magazine)/economy/economy_magazine3.png" alt="Business">
+                            <span class="badge economy">Economy</span>
+                        </div>
+                        <div class="card-content">
+                            <h3>Business</h3>
+                            <p class="meta">by ME Magazine | issued 1 Dec 2026</p>
+                            <p class="price"><strong>€5.60</strong></p>
+                            <p class="meta">Free delivery</p>
+                            <p class="meta">1 Dec on your first eligible order</p>
+                            <a href="shoppinglist.html" class="detail-btn">Add to list</a>
+                        </div>
+                    </article>
+
+                    <!-- [Economy magazine 4] -->
+                     <article class="product-card" data-category="economy" data-price="6.20">
+                        <div class="card-img">
+                            <img src="images(magazine)/economy/economy_magazine4.png" alt="MANAGEMENT">
+                            <span class="badge economy">Economy</span>
+                        </div>
+                        <div class="card-content">
+                            <h3>MANAGEMENT</h3>
+                            <p class="meta">by Success Co. | issued 1 Dec 2026</p>
+                            <p class="price"><strong>€6.20</strong></p>
+                            <p class="meta">Free delivery</p>
+                            <p class="meta">1 Dec on your first eligible order</p>
+                            <a href="shoppinglist.html" class="detail-btn">Add to list</a>
+                        </div>
+                    </article>
+
+                    <!-- [Economy magazine 5] -->
+                     <article class="product-card" data-category="economy" data-price="6.99">
+                        <div class="card-img">
+                            <img src="images(magazine)/economy/economy_magazine5.png" alt="economist">
+                            <span class="badge economy">Economy</span>
+                        </div>
+                        <div class="card-content">
+                            <h3>economist</h3>
+                            <p class="meta">by the golbal business | issued 3 Nov 2026</p>
+                            <p class="price"><strong>€6.99</strong></p>
+                            <p class="meta">Free delivery</p>
+                            <p class="meta">order available now</p>
+                            <a href="shoppinglist.html" class="detail-btn">Add to list</a>
+                        </div>
+                    </article>
+
+                    <!-- ================= Fashion ================= -->
+
+                    <!-- [Fashion magazine 1] -->
+                     <article class="product-card" data-category="fashion" data-price="7">
+                        <div class="card-img">
+                            <img src="images(magazine)/fashion/fashion_magazine1.png" alt="Men's health">
+                            <span class="badge fashion">Cooking</span>
+                        </div>
+                        <div class="card-content">
+                            <h3>Men's health</h3>
+                            <p class="meta">by men's health | issued 6 Dec 2026</p>
+                            <p class="price"><strong>€7</strong></p>
+                            <p class="meta">Free delivery</p>
+                            <p class="meta">6 Dec on your first eligible order</p>
+                            <a href="shoppinglist.html" class="detail-btn">Add to list</a>
+                        </div>
+                    </article>
+                    <!-- [Fashion magazine 2] -->
+                    <article class="product-card" data-category="fashion" data-price="6.20">
+                        <div class="card-img">
+                            <img src="images(magazine)/fashion/fashion_magazine2.png" alt="LUXURY">
+                            <span class="badge fashion">Cooking</span>
+                        </div>
+                        <div class="card-content">
+                            <h3>LUXURY</h3>
+                            <p class="meta">by style.Co | issued 6 Dec 2026</p>
+                            <p class="price"><strong>€6.20</strong></p>
+                            <p class="meta">Free delivery</p>
+                            <p class="meta"> Dec on your first eligible order</p>
+                            <a href="shoppinglist.html" class="detail-btn">Add to list</a>
+                        </div>
+                    </article>
+
+                    <!-- [Fashion magazine 3] -->
+                    <article class="product-card" data-category="fashion" data-price="5.50">
+                        <div class="card-img">
+                            <img src="images(magazine)/fashion/fashion_magazine3.png" alt="icons">
+                            <span class="badge fashion">Fashion</span>
+                        </div>
+                        <div class="card-content">
+                            <h3>ICONS</h3>
+                            <p class="meta">by Generation.Co issued 1 Dec 2026</p>
+                            <p class="price"><strong>€5.50</strong></p>
+                            <p class="meta">Free delivery</p>
+                            <p class="meta">1 Dec on your first eligible order</p>
+                            <a href="shoppinglist.html" class="detail-btn">Add to list</a>
+                        </div>
+                    </article>
+
+                    <!-- [Fashion magazine 4] -->
+                    <article class="product-card" data-category="fashion" data-price="6">
+                        <div class="card-img">
+                            <img src="images(magazine)/fashion/fashion_magazine4.png" alt="EVERYONE">
+                            <span class="badge fashion"></span>
+                        </div>
+                        <div class="card-content">
+                            <h3>EVERYONE</h3>
+                            <p class="meta">by Trend Magazine | issued 1 Dec 2026</p>
+                            <p class="price"><strong>€6</strong></p>
+                            <p class="meta">Free delivery</p>
+                            <p class="meta">1 Dec on your first eligible order</p>
+                            <a href="shoppinglist.html" class="detail-btn">Add to list</a>
+                        </div>
+                    </article>
+
+                    <!-- [Fashion magazine 5] -->
+                    <article class="product-card" data-category="fashion" data-price=" ">
+                        <div class="card-img">
+                            <img src="images(magazine)/fashion/fashion_magazine5.png" alt="Fashion">
+                            <span class="badge fashion">Fashion</span>
+                        </div>
+                        <div class="card-content">
+                            <h3>FASHION</h3>
+                            <p class="meta">by reallygretsite | issued 1 Dec 2026</p>
+                            <p class="price"><strong>€ </strong></p>
+                            <p class="meta">Free delivery</p>
+                            <p class="meta">1 Dec on your first eligible order</p>
+                            <a href="shoppinglist.html" class="detail-btn">Add to list</a>
+                        </div>
+                    </article>
+
+                    <!-- ================= Travel ================= -->
+
+                    <!-- [Travel Magazines 1] -->
+                    <article class="product-card" data-category="travel" data-price="6.50">
+                        <div class="card-img">
+                            <img src="images(magazine)/travel/travel_magazine1.png" alt="Where to go ?">
+                            <span class="badge travel">Travel</span>
+                        </div>
+                        <div class="card-content">
+                            <h3>Where to go ?</h3>
+                            <p class="meta">by going.Co | issued 1 Dec 2026</p>
+                            <p class="price"><strong>€6.50</strong></p>
+                            <p class="meta">Free delivery</p>
+                            <p class="meta">Christmas Edition</p>
+                            <p class="meta">1 Dec on your first eligible order</p>
+                            <a href="shoppinglist.html" class="detail-btn">Add to list</a>
+                        </div>
+                    </article>
+
+                    <!-- [Travel Magazines 2] -->
+                    <article class="product-card" data-category="travel" data-price="7">
+                        <div class="card-img">
+                            <img src="images(magazine)/travel/travel_magazine2.png" alt="VOYAGE">
+                            <span class="badge travel">Travel</span>
+                        </div>
+                        <div class="card-content">
+                            <h3>VOYAGE</h3>
+                            <p class="meta">by ExploreWorld.Co | issued 1 Dec 2026</p>
+                            <p class="price"><strong>7€ </strong></p>
+                            <p class="meta">Free delivery</p>
+                            <p class="meta">1 Dec on your first eligible order</p>
+                            <a href="shoppinglist.html" class="detail-btn">Add to list</a>
+                        </div>
+                    </article>
+
+                    <!-- [Travel Magazines 3] -->
+                    <article class="product-card" data-category="travel" data-price="6.20">
+                        <div class="card-img">
+                            <img src="images(magazine)/travel/travel_magazine3.png" alt="Advantures">
+                            <span class="badge travel">Travel</span>
+                        </div>
+                        <div class="card-content">
+                            <h3>Advantures</h3>
+                            <p class="meta">by GoodtogGo.Co | issued 3 May 2026</p>
+                            <p class="price"><strong>6.20€ </strong></p>
+                            <p class="meta">Free delivery</p>
+                            <p class="meta">Order available nowr</p>
+                            <a href="shoppinglist.html" class="detail-btn">Add to list</a>
+                        </div>
+                    </article>
+
+                    <!-- [Travel Magazines 4] -->
+                    <article class="product-card" data-category="travel" data-price="5.80">
+                        <div class="card-img">
+                            <img src="images(magazine)/travel/travel_magazine4.png" alt="Weekend Travellers">
+                            <span class="badge travel">Travel</span>
+                        </div>
+                        <div class="card-content">
+                            <h3>Weekend Travellers</h3>
+                            <p class="meta">by GoodtogGo.Co | issued 6 Dec 2026</p>
+                            <p class="price"><strong>€5.80 </strong></p>
+                            <p class="meta">Free delivery</p>
+                            <p class="meta">6 Dec on your first eligible order</p>
+                            <a href="shoppinglist.html" class="detail-btn">Add to list</a>
+                        </div>
+                    </article>
+
+                    <!-- [Travel Magazines 5] -->
+                    <article class="product-card" data-category="travel" data-price="5">
+                        <div class="card-img">
+                            <img src="images(magazine)/travel/travel_magazine5.png" alt="GEM'S">
+                            <span class="badge travel">Travel</span>
+                        </div>
+                        <div class="card-content">
+                            <h3>GEM'S</h3>
+                            <p class="meta">by travelgems | issued 3 Jul 2026</p>
+                            <p class="price"><strong>€5</strong></p>
+                            <p class="meta">Free delivery</p>
+                            <p class="meta">Order available now</p>
+                            <a href="shoppinglist.html" class="detail-btn">Add to list</a>
+                        </div>
+                    </article>
+
+
+
+    </main>
+    
+</body>
+</html>
