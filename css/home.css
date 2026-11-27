@@ -1,0 +1,303 @@
+/* Loaded after the team stylesheet, and only by index.html. */
+:root {
+  --charcoal: #262e29;
+  --sage: #dce2d3;
+  --terracotta: #93462f;
+}
+
+body {
+  color: var(--charcoal);
+}
+
+.header-brand {
+  flex-direction: row;
+  gap: 10px;
+  padding: 20px;
+}
+
+.header-brand h1, .header-brand > i {
+  margin: 0;
+}
+
+.cart-button {
+  color: #f7f5ef;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.cart-button i {
+  margin: 0;
+  font-size: 18px;
+}
+
+main {
+  width: 92%;
+  max-width: 1200px;
+  margin: 24px auto 60px;
+}
+
+main h2, main h3 {
+  color: var(--charcoal);
+  font-weight: normal;
+}
+
+main a {
+  color: var(--terracotta);
+  text-underline-offset: 4px;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+/* The two halves of a slide share one background. */
+.carousel {
+  position: relative;
+  background: var(--sage);
+}
+
+.slide {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  min-height: 410px;
+  padding: 44px 7% 66px;
+  gap: 5%;
+}
+
+.slide-copy {
+  max-width: 390px;
+}
+
+.slide-copy .slide-label {
+  font: bold 0.8rem/1.5 Arial, sans-serif;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #495a46;
+  margin: 0 0 14px;
+}
+
+.slide h2 {
+  font-size: 5rem;
+  line-height: 0.96;
+  letter-spacing: -0.045em;
+  margin: 0;
+}
+
+.slide h2 em {
+  color: #495d49;
+}
+
+.slide-copy > p {
+  font-family: Arial, sans-serif;
+}
+
+.button {
+  display: inline-block;
+  background: var(--terracotta);
+  color: white;
+  padding: 13px 20px;
+  font: bold 0.9rem Arial, sans-serif;
+  text-decoration: none;
+}
+
+.button:hover {
+  background: #743925;
+}
+
+.display-books {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 0;
+}
+
+.display-books img {
+  width: 35%;
+  aspect-ratio: 2 / 3;
+  object-fit: cover;
+  box-shadow: 5px 10px 14px #26312644;
+}
+
+.display-books img:first-child {
+  transform: rotate(-11deg) translateY(6%);
+}
+
+.display-books img:nth-child(2) {
+  z-index: 1;
+  transform: scale(1.13);
+}
+
+.display-books img:last-child {
+  transform: rotate(11deg) translateY(6%);
+}
+
+.controls {
+  position: absolute;
+  bottom: 12px;
+  right: 5%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font: 0.9rem Arial, sans-serif;
+}
+
+.controls button {
+  width: 38px;
+  height: 38px;
+  border: 1px solid #81907e;
+  border-radius: 50%;
+  background: transparent;
+  color: var(--charcoal);
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.controls button:hover {
+  background: #edf0e6;
+}
+
+:focus-visible {
+  outline: 3px solid #ab642f;
+  outline-offset: 3px;
+}
+
+/* Each article is one column in its shelf. */
+.shelf, .offers {
+  margin-top: 60px;
+}
+
+.shelf-heading {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.shelf h2, .offers h2 {
+  margin: 0;
+  font-size: 2.75rem;
+  letter-spacing: -0.04em;
+}
+
+.shelf-heading a, .offers a {
+  font: bold 0.9rem Arial, sans-serif;
+}
+
+.book-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.cover {
+  padding: 12% 18%;
+  background: #e8e4d9;
+}
+
+.book:nth-child(even) .cover {
+  background: #e2e6dc;
+}
+
+.cover img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 2 / 3;
+  object-fit: contain;
+  filter: drop-shadow(3px 5px 4px #27291f38);
+}
+
+.book h3 {
+  margin: 12px 0 4px;
+  font-size: 1.3rem;
+}
+
+.book p, .book strong {
+  font: 0.92rem/1.5 Arial, sans-serif;
+}
+
+.book p {
+  margin: 0 0 4px;
+  color: #51594f;
+}
+
+.book strong {
+  font-weight: bold;
+}
+
+.offers {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px;
+}
+
+.offers section {
+  padding: 38px;
+  background: #ebdcd1;
+}
+
+.offers section + section {
+  background: var(--sage);
+}
+
+.offers h2 {
+  font-size: 2rem;
+}
+
+.offers p {
+  font-family: Arial, sans-serif;
+}
+
+@media (max-width: 800px) {
+  .slide h2 {
+    font-size: 3.5rem;
+  }
+  .book-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .slide h2 {
+    font-size: 3rem;
+  }
+  .shelf h2 {
+    font-size: 2rem;
+  }
+  .shelf, .offers {
+    margin-top: 36px;
+  }
+  .offers section {
+    padding: 22px;
+  }
+  .header-brand {
+    justify-content: flex-start;
+  }
+  .cart-button {
+    right: 16px;
+  }
+  .slide {
+    grid-template-columns: 1fr;
+    gap: 22px;
+    padding: 30px 8% 62px;
+  }
+  .display-books {
+    width: 76%;
+    max-width: 280px;
+    margin: auto;
+  }
+  .book-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px 14px;
+  }
+  .offers {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}

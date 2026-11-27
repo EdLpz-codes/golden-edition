@@ -1,110 +1,209 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	
-	<link rel="stylesheet" type="text/css" href="css/style.css">
-
-	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-	<script src="../js/script.js" defer></script>
-	
-	<title>Home - Bookazon</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bookazon | Online Bookshop</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/home.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script src="js/script.js" defer></script>
+  <script src="js/home.js" defer></script>
 </head>
 <body>
-<header class="site-header">
+  <header class="site-header">
+    <div class="header-brand">
+      <i class="fa-solid fa-book-open" aria-hidden="true"></i>
+      <h1>Bookazon</h1>
+      <button class="cart-button" id="cart-button" type="button" aria-expanded="false" aria-controls="cart-panel">
+        <i class="fa-solid fa-cart-shopping" aria-hidden="true"></i> Cart <span id="cart-count">0</span>
+      </button>
+      <div class="cart-panel" id="cart-panel">
+        <h2>Your shopping cart</h2>
+        <div id="cart-items"><p>Your cart is empty.</p></div>
+        <p>Total €<span id="cart-total">0.00</span></p>
+        <button type="button" id="clear-cart">Clear cart</button>
+      </div>
+    </div>
+    <nav class="site-nav" aria-label="Main navigation">
+      <a href="index.html" class="active" aria-current="page">Home</a>
+      <a href="html/list.html">List</a>
+      <a href="html/gifts.html">Gift Cards &amp; Subscriptions</a>
+      <a href="html/Q&amp;A.html">Q&amp;A</a>
+      <a href="html/contact.html">Contact</a>
+    </nav>
+  </header>
 
-	<div class="header-brand">
+  <main>
+    <section class="carousel" aria-label="Featured collections" aria-roledescription="carousel">
+      <article class="slide">
+        <div class="slide-copy">
+          <p class="slide-label">The bestseller edit</p>
+          <h2>Between<br><em>the pages.</em></h2>
+          <p>From quiet lives to grand romances, discover the stories on our bestselling shelf.</p>
+          <a class="button" href="#bestsellers">Explore bestsellers</a>
+        </div>
+        <div class="display-books" aria-hidden="true">
+          <img src="img/Books_and_Audiobooks/Biography/biography-01-the-quiet-ink.jpg" alt="">
+          <img src="img/Books_and_Audiobooks/Romance/romance-01-the-garden-vow.jpg" alt="">
+          <img src="img/Books_and_Audiobooks/Romance/romance-03-golden-hour.jpg" alt="">
+        </div>
+      </article>
+      <article class="slide" hidden>
+        <div class="slide-copy">
+          <p class="slide-label">New on the shelf</p>
+          <h2>Fresh off<br><em>the press.</em></h2>
+          <p>Meet the newest voices and familiar favourites on our latest shelf.</p>
+          <a class="button" href="#new-releases">See new releases</a>
+        </div>
+        <div class="display-books" aria-hidden="true">
+          <img src="img/Books_and_Audiobooks/Romance/romance-10-stay-until-spring.jpg" alt="">
+          <img src="img/Books_and_Audiobooks/Biography/biography-10-first-light-over-harlow.jpg" alt="">
+          <img src="img/Books_and_Audiobooks/Horror/Green_Teeth.jpg" alt="">
+        </div>
+      </article>
+      <article class="slide" hidden>
+        <div class="slide-copy">
+          <p class="slide-label">Bookazon gift cards</p>
+          <h2>Their next<br><em>chapter.</em></h2>
+          <p>Give a reader the pleasure of picking a book for themselves.</p>
+          <a class="button" href="html/gifts.html">Explore gift cards</a>
+        </div>
+        <div class="display-books" aria-hidden="true">
+          <img src="img/Books_and_Audiobooks/Biography/biography-02-roots-and-rivers.jpg" alt="">
+          <img src="img/Books_and_Audiobooks/Biography/biography-10-first-light-over-harlow.jpg" alt="">
+          <img src="img/Books_and_Audiobooks/Romance/romance-01-the-garden-vow.jpg" alt="">
+        </div>
+      </article>
+      <div class="controls" hidden>
+        <button type="button" id="previous" aria-label="Previous promotion">‹</button>
+        <span id="slide-status" aria-live="polite">1 / 3</span>
+        <button type="button" id="next" aria-label="Next promotion">›</button>
+      </div>
+    </section>
 
-		<button type="button" class="cart-button" id="cart-button" aria-label="Open shopping cart" aria-expanded="false" aria-controls="cart-panel">
-			
-			<i class="fa-solid fa-cart-shopping" aria-hidden="true"></i>
+    <section class="shelf" id="bestsellers">
+      <div class="shelf-heading">
+        <h2>Bestsellers</h2>
+        <a href="html/list.html">Browse catalogue</a>
+      </div>
+      <div class="book-grid">
+        <article class="book">
+          <div class="cover">
+            <img src="img/Books_and_Audiobooks/Romance/romance-01-the-garden-vow.jpg" alt="" loading="lazy">
+          </div>
+          <h3>The Garden Vow</h3>
+          <p>Isla Montgomery</p>
+          <strong>€11.00</strong>
+        </article>
+        <article class="book">
+          <div class="cover">
+            <img src="img/Books_and_Audiobooks/Biography/biography-01-the-quiet-ink.jpg" alt="" loading="lazy">
+          </div>
+          <h3>The Quiet Ink</h3>
+          <p>Margaret Ellison Hart</p>
+          <strong>€14.00</strong>
+        </article>
+        <article class="book">
+          <div class="cover">
+            <img src="img/Books_and_Audiobooks/Romance/romance-03-golden-hour.jpg" alt="" loading="lazy">
+          </div>
+          <h3>Golden Hour</h3>
+          <p>Rosalind Hart</p>
+          <strong>€10.00</strong>
+        </article>
+        <article class="book">
+          <div class="cover">
+            <img src="img/Books_and_Audiobooks/Science-Fiction/Exit_99.jpg" alt="" loading="lazy">
+          </div>
+          <h3>Exit 99</h3>
+          <p>Aisha Khan</p>
+          <strong>€13.00</strong>
+        </article>
+        <article class="book">
+          <div class="cover">
+            <img src="img/Books_and_Audiobooks/Biography/biography-02-roots-and-rivers.jpg" alt="" loading="lazy">
+          </div>
+          <h3>Roots &amp; Rivers</h3>
+          <p>Amara Nwosu-Bell</p>
+          <strong>€16.00</strong>
+        </article>
+      </div>
+    </section>
 
-				<span id="cart-count">0</span>
+    <section class="shelf" id="new-releases">
+      <div class="shelf-heading">
+        <h2>New releases</h2>
+        <a href="html/list.html">Browse catalogue</a>
+      </div>
+      <div class="book-grid">
+        <article class="book">
+          <div class="cover">
+            <img src="img/Books_and_Audiobooks/Romance/romance-10-stay-until-spring.jpg" alt="" loading="lazy">
+          </div>
+          <h3>Stay Until Spring</h3>
+          <p>Clara Whitmore</p>
+          <strong>€12.00</strong>
+        </article>
+        <article class="book">
+          <div class="cover">
+            <img src="img/Books_and_Audiobooks/Biography/biography-10-first-light-over-harlow.jpg" alt="" loading="lazy">
+          </div>
+          <h3>First Light Over Harlow</h3>
+          <p>Theo Marsden-Kaye</p>
+          <strong>€16.00</strong>
+        </article>
+        <article class="book">
+          <div class="cover">
+            <img src="img/Books_and_Audiobooks/Horror/Green_Teeth.jpg" alt="" loading="lazy">
+          </div>
+          <h3>Green Teeth</h3>
+          <p>Hiroshi Tanaka</p>
+          <strong>€11.00</strong>
+        </article>
+        <article class="book">
+          <div class="cover">
+            <img src="img/Books_and_Audiobooks/Comedy/Player_Zero.jpg" alt="" loading="lazy">
+          </div>
+          <h3>Player Zero</h3>
+          <p>Donovan Smith</p>
+          <strong>€11.00</strong>
+        </article>
+        <article class="book">
+          <div class="cover">
+            <img src="img/Books_and_Audiobooks/Science-Fiction/scifi-05-children-of-the-red-dust.jpg" alt="" loading="lazy">
+          </div>
+          <h3>Children of the Red Dust</h3>
+          <p>Idris Halloway</p>
+          <strong>€17.00</strong>
+        </article>
+      </div>
+    </section>
 
-		</button>
-
-		<div class="cart-panel" id="cart-panel">
-
-			<h2> Your Shopping Cart </h2>
-			
-				<div id="cart-items">
-					
-					<p> Your cart is empty</p>
-
-				</div>
-
-		<br>
-
-				<p>Total: €<span id="cart-total">0.00</span></p>
-
-					<button type="button" id="clear-cart"> Clear cart</button>
-
-		</div>
-
-		<i class="fa-solid fa-book-open" aria-hidden="true"></i>
-
-			<h1>Bookazon</h1>
-
-				<div class="header-line"></div>
-
-	</div>
-
-<nav class="site-nav" aria-label="Main navigation">
-	
-		<a href="index.html class="active" aria-current="page""><i class=""></i>Home</a>
-
-		<a href="html/list.html"><i class=""></i>Catalog</a>
-
-		<a href="html/gifts.html"><i class=""></i>Gift Cards & Subscriptions</a>
-
-		<a href="html/Q&A.html"><i class=""></i>Q&A</a>
-
-		<a href="html/contact.html"><i class=""></i>Contact</a>
-
-</nav>
-
-</header>
-
-	<main> 
-	
-	
-	</main>
-
-		<footer class="site-footer">
-	
-			<div class="footer-content">
-
-				<h2 class="footer-logo"> Bookazon </h2>
-				
-					<p class="footer-tagline"> We sell books. That's it. No rocket ships. </p>
-
-						<nav class="footer-nav" aria-label="Footer navigation">
-							
-							<a href="index.html"> Home </a>
-
-							<a href="html/list.html"> Catalog </a>
-
-							<a href="html/gifts.html"> Gift Cards & Subscriptions </a>
-
-							<a href="html/Q&A.html"> Q&A </a>
-
-							<a href="html/contact.html"> Contact </a>
-
-						</nav>
-
-			<div class="footer-divider"></div>
-
-				<p class="footer-copyright">&copy; 2026 Bookazon</p>
-				
-
-			</div>
-
-		</footer>
-	
+    <div class="offers">
+      <section>
+        <h2>Bookazon gift cards</h2>
+        <p>Choose a €10, €25 or €50 card and let them pick their next read.</p>
+        <a href="html/gifts.html">Browse gift cards</a>
+      </section>
+      <section>
+        <h2>The monthly reading edit</h2>
+        <p>Get monthly reading picks with the Basic Reader subscription for €4.99 a month.</p>
+        <a href="html/gifts.html">Explore subscriptions</a>
+      </section>
+    </div>
+  </main>
+  <footer class="site-footer">
+    <div class="footer-content">
+      <h2 class="footer-logo">Bookazon</h2>
+      <p class="footer-tagline">We sell books. That's it. No rocket ships.</p>
+      <nav class="footer-nav" aria-label="Company information">
+        <a href="html/Q&amp;A.html">Questions &amp; answers</a>
+        <a href="html/contact.html">Contact Bookazon</a>
+      </nav>
+      <div class="footer-divider"></div>
+      <p class="footer-copyright">© 2026 Bookazon</p>
+    </div>
+  </footer>
 </body>
 </html>
-
-
-
